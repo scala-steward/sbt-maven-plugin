@@ -24,14 +24,20 @@ jobs:
     uses: playframework/.github/.github/workflows/cmd.yml@v4
     with:
       java: 25, 21, 17, 11
-      scala: 2.12.20
+      scala: 2.12.x, 3.x
       add-dimensions: >-
         {
-          "sbt": [ "1.9.0" ]
+          "sbt": [ "1.12.9", "2.0.0-RC11" ]
         }
+      exclude: >-
+        [
+          {"scala": "2.12.x", "sbt": "2.0.0-RC11"},
+          {"scala": "3.x", "sbt": "1.12.9"},
+          {"java": "11", "scala": "3.x"}
+        ]
       cmd: >-
         sbt "
-          + Test/compile;
+          ++$MATRIX_SCALA Test/compile;
           set scriptedSbt := \"$MATRIX_SBT\";
           set scriptedLaunchOpts += \"-Dscala.version=$MATRIX_SCALA\";
           show scriptedSbt;

@@ -1,6 +1,6 @@
 // Copyright (C) from 2023 The sbt contributors <https://github.com/sbt>
 
-addSbtPlugin("com.github.sbt" % "sbt-web-build-base" % "2.0.2")
+addSbtPlugin("com.github.sbt" % "sbt-web-build-base" % "2.1.0-M3")
 
 addSbtPlugin("com.github.sbt" % "sbt-ci-release" % "1.11.2")
 

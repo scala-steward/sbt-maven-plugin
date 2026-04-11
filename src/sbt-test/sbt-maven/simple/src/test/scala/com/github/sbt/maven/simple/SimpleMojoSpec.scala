@@ -6,7 +6,6 @@ package com.github.sbt.maven.simple
 
 import scala.io.BufferedSource
 import scala.io.Source
-import scala.xml.Elem
 import scala.xml.NodeSeq
 import scala.xml.XML
 

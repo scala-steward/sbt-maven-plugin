@@ -7,6 +7,8 @@ package com.github.sbt.maven
 import java.io.File
 import java.nio.file.Files
 
+import scala.jdk.CollectionConverters._
+
 import sbt.*
 import sbt.io.PathFinder
 import sbt.librarymanagement.Configurations
@@ -96,7 +98,7 @@ object SbtMavenPlugin extends AutoPlugin {
     pluginDescriptor.setArtifactId(id.name)
     pluginDescriptor.setVersion(id.revision)
     pluginDescriptor.setGoalPrefix(goalPrefix)
-    pluginDescriptor.setDependencies(toComponentDependencies(scala.collection.JavaConverters.seqAsJavaList(artifacts)))
+    pluginDescriptor.setDependencies(toComponentDependencies(artifacts.asJava))
     pluginDescriptor
   }
 

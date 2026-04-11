@@ -1,4 +1,4 @@
 > package
-$ exists target/classes/META-INF/maven/plugin.xml
-> test
+> checkPluginXml
+> runCompatTests
 > scripted
