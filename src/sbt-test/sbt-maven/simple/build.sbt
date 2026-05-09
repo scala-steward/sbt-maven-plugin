@@ -13,7 +13,7 @@ lazy val root = project
           target.value / "classes" / "META-INF" / "maven" / "plugin.xml"
         } else {
           target.value / "resource_managed" / "main" / "META-INF" / "maven" / "plugin.xml"
-      }
+        }
       require(pluginXml.isFile, s"Expected generated plugin.xml at $pluginXml")
     },
     runCompatTests := {
