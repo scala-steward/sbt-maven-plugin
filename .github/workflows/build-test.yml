@@ -27,12 +27,12 @@ jobs:
       scala: 2.12.x, 3.x
       add-dimensions: >-
         {
-          "sbt": [ "1.12.9", "2.0.0-RC11" ]
+          "sbt": [ "1.12.11", "2.0.0-RC12" ]
         }
       exclude: >-
         [
-          {"scala": "2.12.x", "sbt": "2.0.0-RC11"},
-          {"scala": "3.x", "sbt": "1.12.9"},
+          {"scala": "2.12.x", "sbt": "2.0.0-RC12"},
+          {"scala": "3.x", "sbt": "1.12.11"},
           {"java": "11", "scala": "3.x"}
         ]
       cmd: >-

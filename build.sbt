@@ -38,7 +38,7 @@ developers += Developer(
 
 libraryDependencies ++= Seq(
   "org.apache.maven.plugins" % "maven-plugin-plugin" % "3.15.2",
-  "org.apache.maven"         % "maven-core"          % "3.9.14",
+  "org.apache.maven"         % "maven-core"          % "3.9.15",
   "junit"                    % "junit"               % "4.13.2" % Test
 )
 
@@ -66,7 +66,7 @@ pluginCrossBuild / sbtVersion := {
     case "2.12" =>
       sbtVersion.value
     case _ =>
-      "2.0.0-RC11"
+      "2.0.0-RC12"
   }
 }
 
