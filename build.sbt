@@ -38,7 +38,7 @@ developers += Developer(
 
 libraryDependencies ++= Seq(
   "org.apache.maven.plugins" % "maven-plugin-plugin" % "3.15.2",
-  "org.apache.maven"         % "maven-core"          % "3.9.15",
+  "org.apache.maven"         % "maven-core"          % "3.9.16",
   "junit"                    % "junit"               % "4.13.2" % Test
 )
 
@@ -52,7 +52,7 @@ Global / onLoad := (Global / onLoad).value.andThen { s =>
   s
 }
 
-crossScalaVersions += "3.8.3"
+crossScalaVersions += "3.8.4"
 
 scalacOptions ++= {
   scalaBinaryVersion.value match {
